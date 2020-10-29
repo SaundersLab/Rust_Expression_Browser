@@ -25,3 +25,12 @@ This adds information on used fields and which are shown by default
 rake load_data:factor[../custom_config/FactorOrder.tsv]
 rake load_data:default_factor_order[../custom_config/default_factor_order.txt]
 ```
+
+## Load the metadata files
+
+```bash
+for file in $(ls ../metadata_files/*metadata.txt)
+do
+    rake load_data:metadata["$file"]
+done
+```
