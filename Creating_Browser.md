@@ -50,5 +50,12 @@ rake load_data:gff_produced_genes[IWGSC_v1.1,../data/IWGSC_v1.1_20170706_cds.fas
 This allows the visualtion of gene homoeologues and the creation of ternary plots
 
 ```bash
-rake load_data:homology_pairs[IWGSC_v1.1,../homologies_ta_compara_plants_41_94.txt]
+rake load_data:homology_pairs[IWGSC_v1.1,../custom_config/homologies_ta_compara_plants_41_94.txt]
+```
+
+## Load default genes
+This controls what genes are suggested to users as examples
+
+```bash
+rake load_data:sample_genes[../custom_config/default_genes.csv]
 ```
