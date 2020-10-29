@@ -45,3 +45,10 @@ rake load_data:de_novo_genes[PST_E104,../data/Pucstr1_GeneCatalog_CDS_20170922.f
 
 rake load_data:gff_produced_genes[IWGSC_v1.1,../data/IWGSC_v1.1_20170706_cds.fasta]
 ```
+
+## Load in homology data for wheat genes
+This allows the visualtion of gene homoeologues and the creation of ternary plots
+
+```bash
+rake load_data:homology_pairs[IWGSC_v1.1,../homologies_ta_compara_plants_41_94.txt]
+```
