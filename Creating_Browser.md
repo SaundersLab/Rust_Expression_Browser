@@ -59,3 +59,10 @@ This controls what genes are suggested to users as examples
 ```bash
 rake load_data:sample_genes[../custom_config/default_genes.csv]
 ```
+
+## Start the mongodb service
+This requires sudo rights
+
+```bash
+sudo service mongod start
+```
