@@ -17,3 +17,11 @@ These contain information on the samples
 rake db:setup
 rake db:migrate
 ```
+
+## Initial provision of databases
+This adds information on used fields and which are shown by default
+
+```bash
+rake load_data:factor[../custom_config/FactorOrder.tsv]
+rake load_data:default_factor_order[../custom_config/default_factor_order.txt]
+```
