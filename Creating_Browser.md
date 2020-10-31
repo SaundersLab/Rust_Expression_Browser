@@ -39,11 +39,11 @@ done
 This adds the transcripts to the MySQL databases
 
 ```bash
-rake load_data:de_novo_genes[PST130,../data/PST130_transcripts.fan]
+rake load_data:de_novo_genes[PST-130,../data/PST130_transcripts.fan]
 
-rake load_data:de_novo_genes[PST_104E,../data/Pucstr1_GeneCatalog_CDS_20170922.fasta]
+rake load_data:de_novo_genes[PST-104E,../data/Pucstr1_GeneCatalog_CDS_20170922.fasta]
 
-rake load_data:gff_produced_genes[IWGSC_v1.1,../data/IWGSC_v1.1_20170706_cds.fasta]
+rake load_data:gff_produced_genes["IWGSC v1.1",../data/IWGSC_v1.1_20170706_cds.fasta]
 ```
 
 ## Load in homology data for wheat genes
