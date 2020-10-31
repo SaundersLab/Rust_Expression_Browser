@@ -43,14 +43,14 @@ rake load_data:de_novo_genes[PST-130,../data/PST130_transcripts.fan]
 
 rake load_data:de_novo_genes[PST-104E,../data/Pucstr1_GeneCatalog_CDS_20170922.fasta]
 
-rake load_data:gff_produced_genes["IWGSC v1.1",../data/IWGSC_v1.1_20170706_cds.fasta]
+rake load_data:gff_produced_genes[IWGSCv1.1,../data/IWGSC_v1.1_20170706_cds.fasta]
 ```
 
 ## Load in homology data for wheat genes
 This allows the visualtion of gene homoeologues and the creation of ternary plots
 
 ```bash
-rake load_data:homology_pairs[IWGSC_v1.1,../custom_config/homologies_ta_compara_plants_41_94.txt]
+rake load_data:homology_pairs[IWGSCv1.1,../custom_config/homologies_ta_compara_plants_41_94.txt]
 ```
 
 ## Load default genes
@@ -73,144 +73,144 @@ This adds the expression data to the mongodb, a log file is removed periodically
 ```bash
 # Adams et al., in press
 
-rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",PST130,tpm,../PST130_expression/merged_Adams_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",PST130,count,../PST130_expression/merged_Adams_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",PST-130,tpm,../PST130_expression/merged_Adams_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",PST-130,count,../PST130_expression/merged_Adams_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",PST_104E,tpm,../PST_104E_expression/merged_Adams_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",PST_104E,count,../PST_104E_expression/merged_Adams_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",PST-104E,tpm,../PST_104E_expression/merged_Adams_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",PST-104E,count,../PST_104E_expression/merged_Adams_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Adams_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Adams_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Adams_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Adams\ et\ al.\,\ in\ press",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Adams_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Boshoff et al., 2020
 
-rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",PST130,tpm,../PST130_expression/merged_Boshoff_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",PST130,count,../PST130_expression/merged_Boshoff_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",PST-130,tpm,../PST130_expression/merged_Boshoff_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",PST-130,count,../PST130_expression/merged_Boshoff_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",PST_104E,tpm,../PST_104E_expression/merged_Boshoff_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",PST_104E,count,../PST_104E_expression/merged_Boshoff_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",PST-104E,tpm,../PST_104E_expression/merged_Boshoff_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",PST-104E,count,../PST_104E_expression/merged_Boshoff_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Boshoff_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Boshoff_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Boshoff_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Boshoff\ et\ al.\,\ 2020",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Boshoff_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Bueno-Sancho et al., 2017
 
-rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",PST130,tpm,../PST130_expression/merged_Bueno-Sancho_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",PST130,count,../PST130_expression/merged_Bueno-Sancho_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",PST-130,tpm,../PST130_expression/merged_Bueno-Sancho_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",PST-130,count,../PST130_expression/merged_Bueno-Sancho_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",PST_104E,tpm,../PST_104E_expression/merged_Bueno-Sancho_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",PST_104E,count,../PST_104E_expression/merged_Bueno-Sancho_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",PST-104E,tpm,../PST_104E_expression/merged_Bueno-Sancho_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",PST-104E,count,../PST_104E_expression/merged_Bueno-Sancho_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Bueno-Sancho_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Bueno-Sancho_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Bueno-Sancho_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Bueno-Sancho\ et\ al.\,\ 2017",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Bueno-Sancho_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Cantu et al., 2013
 
-rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",PST130,tpm,../PST130_expression/merged_Cantu_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",PST130,count,../PST130_expression/merged_Cantu_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",PST-130,tpm,../PST130_expression/merged_Cantu_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",PST-130,count,../PST130_expression/merged_Cantu_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",PST_104E,tpm,../PST_104E_expression/merged_Cantu_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",PST_104E,count,../PST_104E_expression/merged_Cantu_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",PST-104E,tpm,../PST_104E_expression/merged_Cantu_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",PST-104E,count,../PST_104E_expression/merged_Cantu_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Cantu_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Cantu_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Cantu_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Cantu\ et\ al.\,\ 2013",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Cantu_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Corredor-Moreno et al., in press
 
-rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",PST130,tpm,../PST130_expression/merged_Corredor-Moreno_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",PST130,count,../PST130_expression/merged_Corredor-Moreno_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",PST-130,tpm,../PST130_expression/merged_Corredor-Moreno_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",PST-130,count,../PST130_expression/merged_Corredor-Moreno_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",PST_104E,tpm,../PST_104E_expression/merged_Corredor-Moreno_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",PST_104E,count,../PST_104E_expression/merged_Corredor-Moreno_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",PST-104E,tpm,../PST_104E_expression/merged_Corredor-Moreno_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",PST-104E,count,../PST_104E_expression/merged_Corredor-Moreno_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Corredor-Moreno_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Corredor-Moreno_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Corredor-Moreno_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Corredor-Moreno\ et\ al.\,\ in\ press",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Corredor-Moreno_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Dobon et al., 2016
 
-rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",PST130,tpm,../PST130_expression/merged_Dobon_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",PST130,count,../PST130_expression/merged_Dobon_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",PST-130,tpm,../PST130_expression/merged_Dobon_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",PST-130,count,../PST130_expression/merged_Dobon_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",PST_104E,tpm,../PST_104E_expression/merged_Dobon_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",PST_104E,count,../PST_104E_expression/merged_Dobon_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",PST-104E,tpm,../PST_104E_expression/merged_Dobon_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",PST-104E,count,../PST_104E_expression/merged_Dobon_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Dobon_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Dobon_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Dobon_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Dobon\ et\ al.\,\ 2016",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Dobon_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Garnica et al., 2013
 
-rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",PST130,tpm,../PST130_expression/merged_Garnica_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",PST130,count,../PST130_expression/merged_Garnica_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",PST-130,tpm,../PST130_expression/merged_Garnica_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",PST-130,count,../PST130_expression/merged_Garnica_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",PST_104E,tpm,../PST_104E_expression/merged_Garnica_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",PST_104E,count,../PST_104E_expression/merged_Garnica_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",PST-104E,tpm,../PST_104E_expression/merged_Garnica_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",PST-104E,count,../PST_104E_expression/merged_Garnica_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Garnica_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Garnica_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Garnica_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Garnica\ et\ al.\,\ 2013",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Garnica_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Hubbard et al., 2015
 
-rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",PST130,tpm,../PST130_expression/merged_Hubbard_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",PST130,count,../PST130_expression/merged_Hubbard_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",PST-130,tpm,../PST130_expression/merged_Hubbard_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",PST-130,count,../PST130_expression/merged_Hubbard_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",PST_104E,tpm,../PST_104E_expression/merged_Hubbard_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",PST_104E,count,../PST_104E_expression/merged_Hubbard_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",PST-104E,tpm,../PST_104E_expression/merged_Hubbard_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",PST-104E,count,../PST_104E_expression/merged_Hubbard_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Hubbard_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Hubbard_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Hubbard_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Hubbard\ et\ al.\,\ 2015",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Hubbard_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Radhakrishnan et al., 2013
 
-rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",PST130,tpm,../PST130_expression/merged_Radhakrishnan_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",PST130,count,../PST130_expression/merged_Radhakrishnan_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",PST-130,tpm,../PST130_expression/merged_Radhakrishnan_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",PST-130,count,../PST130_expression/merged_Radhakrishnan_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",PST_104E,tpm,../PST_104E_expression/merged_Radhakrishnan_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",PST_104E,count,../PST_104E_expression/merged_Radhakrishnan_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",PST-104E,tpm,../PST_104E_expression/merged_Radhakrishnan_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",PST-104E,count,../PST_104E_expression/merged_Radhakrishnan_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Radhakrishnan_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Radhakrishnan_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Radhakrishnan_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Radhakrishnan\ et\ al.\,\ 2019",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Radhakrishnan_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # Schwessinger et al., 2018
 
-rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",PST130,tpm,../PST130_expression/merged_Schwessinger_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",PST130,count,../PST130_expression/merged_Schwessinger_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",PST-130,tpm,../PST130_expression/merged_Schwessinger_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",PST-130,count,../PST130_expression/merged_Schwessinger_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",PST_104E,tpm,../PST_104E_expression/merged_Schwessinger_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",PST_104E,count,../PST_104E_expression/merged_Schwessinger_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",PST-104E,tpm,../PST_104E_expression/merged_Schwessinger_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",PST-104E,count,../PST_104E_expression/merged_Schwessinger_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_Schwessinger_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_Schwessinger_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_Schwessinger_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["Schwessinger\ et\ al.\,\ 2018",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_Schwessinger_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 
 # van Schalwyk et al., in press
 
-rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",PST130,tpm,../PST130_expression/merged_van_Schalwyk_exp_PST130_tpm_0.tsv]
-rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",PST130,count,../PST130_expression/merged_van_Schalwyk_exp_PST130_count_0.tsv]
+rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",PST-130,tpm,../PST130_expression/merged_van_Schalwyk_exp_PST130_tpm_0.tsv]
+rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",PST-130,count,../PST130_expression/merged_van_Schalwyk_exp_PST130_count_0.tsv]
 
-rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",PST_104E,tpm,../PST_104E_expression/merged_van_Schalwyk_exp_PST_104E_tpm_0.tsv]
-rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",PST_104E,count,../PST_104E_expression/merged_van_Schalwyk_exp_PST_104E_count_0.tsv]
+rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",PST-104E,tpm,../PST_104E_expression/merged_van_Schalwyk_exp_PST_104E_tpm_0.tsv]
+rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",PST-104E,count,../PST_104E_expression/merged_van_Schalwyk_exp_PST_104E_count_0.tsv]
 
-rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",IWGSC_v1.1,tpm,../IWGSC_v1_1_expression/merged_van_Schalwyk_exp_IWGSC_v1_1_tpm_0.tsv]
-rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",IWGSC_v1.1,count,../IWGSC_v1_1_expression/merged_van_Schalwyk_exp_IWGSC_v1_1_count_0.tsv]
+rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",IWGSCv1.1,tpm,../IWGSC_v1_1_expression/merged_van_Schalwyk_exp_IWGSC_v1_1_tpm_0.tsv]
+rake load_data:values_mongo["van\ Schalwyk\ et\ al.\,\ in\ press",IWGSCv1.1,count,../IWGSC_v1_1_expression/merged_van_Schalwyk_exp_IWGSC_v1_1_count_0.tsv]
 
 rm /home/expvip/expvip_web/log/development.log
 ```
