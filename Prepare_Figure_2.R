@@ -1,7 +1,7 @@
 #!/usr/local/bin/Rscript
 
 #Prepares four bar plots from a combined metadata file in preparation for paper
-#The metadata files must contain the fields: country, date collected,
+#The metadata file must contain the fields: country, date collected,
 #host variety and source
 
 #Import required libraries
@@ -26,9 +26,6 @@ opt_list <- list(
     make_option("--metadata_all", type = "character",
     help = "tab separated file of all metadata used to
     build expression browser"),
-    make_option("--metadata_field", type = "character",
-    help = "tab separated file of field sample metadata used to
-    build expression browser"),
     make_option("--variety_count", type = "character",
     help = "tab separated file of the number of confirmed host
     varities in each country"),
@@ -37,7 +34,6 @@ opt_list <- list(
 
 opt <- parse_args(OptionParser(option_list = opt_list))
 f_all <- opt$metadata_all
-f_field <- opt$metadata_field
 f_variety <- opt$variety_count
 o <- opt$out
 
@@ -46,8 +42,7 @@ o <- opt$out
 metadata_all <- read.delim(f_all,
     header = TRUE, stringsAsFactors = FALSE, quote = "", sep = "\t")
 
-metadata_field <- read.delim(f_field,
-    header = TRUE, stringsAsFactors = FALSE, quote = "", sep = "\t")
+metadata_field <- metadata_all %>% filter(Source == "Field")
 
 variety_count <- read.delim(f_variety, header = TRUE, stringsAsFactors = FALSE,
     quote = "", sep = "\t")
@@ -116,9 +111,9 @@ plot.tag = element_text(family = "Arial", size = 10))
 
 #Prepare sample plot
 
-type_of_sample <- count(metadata_all, source)
+type_of_sample <- count(metadata_all, Source)
 
-sample_plot <- ggplot(type_of_sample, aes(x = reorder(source, -n), y = n)) +
+sample_plot <- ggplot(type_of_sample, aes(x = reorder(Source, -n), y = n)) +
 xlab("Source of Sample") + ylab("Frequency") +
 geom_bar(stat = "identity", fill = "navy") + labs(tag = "C") +
 theme(panel.grid.major = element_blank(), panel.grid.minor =
